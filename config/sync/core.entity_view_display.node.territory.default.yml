@@ -1,0 +1,108 @@
+uuid: a4f9aea2-4212-4248-b14c-10dd9faa911c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.territory.field_geofield
+    - field.field.node.territory.field_last_worked
+    - field.field.node.territory.field_name
+    - field.field.node.territory.field_term_territory
+    - field.field.node.territory.field_territory_id
+    - node.type.territory
+  module:
+    - datetime
+    - field_layout
+    - layout_discovery
+    - leaflet
+    - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: node.territory.default
+targetEntityType: node
+bundle: territory
+mode: default
+content:
+  field_geofield:
+    weight: 1
+    label: hidden
+    settings:
+      multiple_map: '0'
+      popup_content: ''
+      leaflet_map: 'OSM Mapnik'
+      height: '600'
+      fullscreen_control: '1'
+      reset_map:
+        position: topright
+        control: 0
+      map_position:
+        zoom: '12'
+        minZoom: '1'
+        maxZoom: '18'
+        force: 0
+      icon:
+        iconUrl: ''
+        shadowUrl: ''
+        iconSize:
+          x: ''
+          'y': ''
+        iconAnchor:
+          x: ''
+          'y': ''
+        shadowSize:
+          x: ''
+          'y': ''
+        shadowAnchor:
+          x: ''
+          'y': ''
+        popupAnchor:
+          x: ''
+          'y': ''
+      path: '{"color":"#3388ff","opacity":"1.0","stroke":true,"weight":3,"fill":"depends","fillColor":"*","fillOpacity":"0.2"}'
+      popup: 0
+      hide_empty_map: 0
+      disable_wheel: 0
+      leaflet_markercluster:
+        control: 0
+        options: '{"spiderfyOnMaxZoom":true,"showCoverageOnHover":true,"removeOutsideVisibleBounds": false}'
+    third_party_settings: {  }
+    type: leaflet_formatter_default
+    region: content
+  field_last_worked:
+    weight: 3
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_name:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_term_territory:
+    weight: 4
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_territory_id:
+    weight: 2
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+hidden:
+  langcode: true
+  links: true

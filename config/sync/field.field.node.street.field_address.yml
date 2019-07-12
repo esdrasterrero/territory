@@ -1,0 +1,19 @@
+uuid: aca25441-15d9-4a3e-873b-2010e9c11eda
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_address
+    - node.type.street
+id: node.street.field_address
+field_name: field_address
+entity_type: node
+bundle: street
+label: Address
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

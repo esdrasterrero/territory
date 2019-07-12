@@ -1,0 +1,21 @@
+uuid: 2f2025d4-b928-49b3-a464-1acdefd93373
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_call_status
+    - node.type.street
+  module:
+    - options
+id: node.street.field_call_status
+field_name: field_call_status
+entity_type: node
+bundle: street
+label: 'Call Status'
+description: 'Define whether the address has an exception.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

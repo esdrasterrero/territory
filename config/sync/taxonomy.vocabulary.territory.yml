@@ -1,0 +1,8 @@
+uuid: a02bbc17-09aa-47ae-83b5-dfb0cf2e6eb8
+langcode: en
+status: true
+dependencies: {  }
+name: Territory
+vid: territory
+description: ''
+weight: 0

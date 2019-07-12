@@ -1,0 +1,21 @@
+uuid: bc031685-18cc-4ba5-b64d-bcc14b6f1a52
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_territory_zone
+    - taxonomy.vocabulary.territory
+  module:
+    - options
+id: taxonomy_term.territory.field_territory_zone
+field_name: field_territory_zone
+entity_type: taxonomy_term
+bundle: territory
+label: 'Territory Zone'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

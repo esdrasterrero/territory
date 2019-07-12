@@ -1,0 +1,29 @@
+uuid: fc9376f0-8bce-4f54-a2ff-acffb116b834
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_term_territory
+    - node.type.street
+    - taxonomy.vocabulary.territory
+id: node.street.field_term_territory
+field_name: field_term_territory
+entity_type: node
+bundle: street
+label: 'Territory (Term)'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      territory: territory
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,11 @@
+uuid: 3f75678c-cd0b-48b8-81d4-b8729f04218e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.street
+id: node.street
+target_entity_type_id: node
+target_bundle: street
+default_langcode: site_default
+language_alterable: false

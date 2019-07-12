@@ -1,0 +1,23 @@
+uuid: 9522161b-ac33-49bb-8c27-583edc6db459
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_territory_id
+    - node.type.territory
+id: node.territory.field_territory_id
+field_name: field_territory_id
+entity_type: node
+bundle: territory
+label: 'Territory ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

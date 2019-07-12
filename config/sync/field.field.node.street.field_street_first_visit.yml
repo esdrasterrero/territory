@@ -1,0 +1,23 @@
+uuid: 6fd953b5-7215-4608-8132-5f198f929a05
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_street_first_visit
+    - node.type.street
+id: node.street.field_street_first_visit
+field_name: field_street_first_visit
+entity_type: node
+bundle: street
+label: 'First Visit'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'En casa'
+  off_label: 'No en casa'
+field_type: boolean

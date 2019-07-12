@@ -1,0 +1,11 @@
+uuid: 081b7f6f-3ef7-4926-b3ab-f594dd3e40b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.territory
+id: node.territory
+target_entity_type_id: node
+target_bundle: territory
+default_langcode: site_default
+language_alterable: false

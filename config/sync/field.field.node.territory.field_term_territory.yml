@@ -1,0 +1,29 @@
+uuid: df1be19d-1e10-44ce-8d90-9700a22a55d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_term_territory
+    - node.type.territory
+    - taxonomy.vocabulary.territory
+id: node.territory.field_term_territory
+field_name: field_term_territory
+entity_type: node
+bundle: territory
+label: 'Territory (Term)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      territory: territory
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

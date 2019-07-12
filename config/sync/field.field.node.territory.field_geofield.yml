@@ -1,0 +1,22 @@
+uuid: 48052840-2dd1-4b8b-909b-323faab700b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_geofield
+    - node.type.territory
+  module:
+    - geofield
+id: node.territory.field_geofield
+field_name: field_geofield
+entity_type: node
+bundle: territory
+label: Geofield
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  backend: geofield_backend_default
+field_type: geofield

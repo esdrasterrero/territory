@@ -1,0 +1,41 @@
+uuid: c5d425da-b67f-4685-8ba8-be750e9998da
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.street.field_address
+    - field.field.node.street.field_call_status
+    - field.field.node.street.field_geofield
+    - field.field.node.street.field_geofield_map
+    - field.field.node.street.field_street_first_visit
+    - field.field.node.street.field_street_territory
+    - field.field.node.street.field_term_territory
+    - node.type.street
+  module:
+    - field_layout
+    - layout_discovery
+    - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: node.street.teaser
+targetEntityType: node
+bundle: street
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_address: true
+  field_call_status: true
+  field_geofield: true
+  field_geofield_map: true
+  field_street_first_visit: true
+  field_street_territory: true
+  field_term_territory: true
+  langcode: true

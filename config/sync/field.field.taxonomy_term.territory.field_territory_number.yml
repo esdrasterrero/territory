@@ -1,0 +1,23 @@
+uuid: 16711e31-c03d-4958-ab8f-2c3e26011f79
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_territory_number
+    - taxonomy.vocabulary.territory
+id: taxonomy_term.territory.field_territory_number
+field_name: field_territory_number
+entity_type: taxonomy_term
+bundle: territory
+label: 'Territory number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

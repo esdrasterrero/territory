@@ -1,0 +1,20 @@
+uuid: b127ab59-6fea-4845-a5a2-06b763a6712a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_territory_id
+field_name: field_territory_id
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

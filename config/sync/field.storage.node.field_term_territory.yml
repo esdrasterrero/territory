@@ -1,0 +1,20 @@
+uuid: b61d766c-0350-4159-86c5-cd7d2d5b1d7e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_term_territory
+field_name: field_term_territory
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,21 @@
+uuid: c0e77fb5-646c-4bde-ad02-253cc8c6f517
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_last_worked
+    - node.type.territory
+  module:
+    - datetime
+id: node.territory.field_last_worked
+field_name: field_last_worked
+entity_type: node
+bundle: territory
+label: 'Last worked'
+description: 'The date in which this territory has last been worked on.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,0 +1,29 @@
+uuid: 1f3e46f4-1912-4d04-98c1-87d32a4b7639
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_street_territory
+    - node.type.street
+    - node.type.territory
+id: node.street.field_street_territory
+field_name: field_street_territory
+entity_type: node
+bundle: street
+label: 'Territory (CT)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      territory: territory
+    sort:
+      field: title
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
