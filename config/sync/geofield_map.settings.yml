@@ -10,3 +10,4 @@ geocoder:
     clientside: session_storage
 _core:
   default_config_hash: GB9C_77zlsCsibBg5Cf3E4yntcBIoWCrrlZIooCpoUY
+langcode: es

@@ -1,5 +1,5 @@
 uuid: 7d7539c9-26d4-4443-a9ac-0cb841378262
-langcode: en
+langcode: es
 status: true
 dependencies:
   config:
@@ -13,7 +13,7 @@ id: node.book.body
 field_name: body
 entity_type: node
 bundle: book
-label: Body
+label: Cuerpo
 description: ''
 required: false
 translatable: true

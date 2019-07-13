@@ -51,3 +51,4 @@ plugins_options:
   yandex: {  }
 _core:
   default_config_hash: osnxMBUiZuk-XXBHfOYTjoChGsNlHSSMZnv3CrXGFcE
+langcode: es
