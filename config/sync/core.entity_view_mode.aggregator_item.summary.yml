@@ -1,5 +1,5 @@
 uuid: 32a022e0-155f-49ad-a4b6-c300ac5ae268
-langcode: en
+langcode: es
 status: true
 dependencies:
   module:
@@ -7,6 +7,6 @@ dependencies:
 _core:
   default_config_hash: 0LZvohlEB6FpI9Irz7wHVLBVKGcjHzhvI8mCzjHndrc
 id: aggregator_item.summary
-label: Summary
+label: Resumen
 targetEntityType: aggregator_item
 cache: true

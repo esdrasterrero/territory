@@ -1,5 +1,5 @@
 uuid: 7216a9fe-9487-48fb-aa28-f20751f335ed
-langcode: en
+langcode: es
 status: true
 dependencies:
   enforced:
@@ -7,9 +7,9 @@ dependencies:
       - book
 _core:
   default_config_hash: 2gWGA-X4ERc4McStS7cMEG3ZBpDEqfNRDPTjB1v674Y
-name: 'Book page'
+name: 'Página de libro'
 type: book
-description: '<em>Books</em> have a built-in hierarchical navigation. Use for handbooks or tutorials.'
+description: 'Los <em>libros</em> tienen una navegación jerárquica. Úselos para manuales o tutoriales.'
 help: ''
 new_revision: true
 preview_mode: 1
