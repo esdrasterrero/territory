@@ -1,0 +1,4 @@
+services:
+  leaflet.service:
+    class: Drupal\leaflet_easyprint\LeafletEasyprintService
+    arguments: ['@geofield.geophp', '@module_handler', '@link_generator']
