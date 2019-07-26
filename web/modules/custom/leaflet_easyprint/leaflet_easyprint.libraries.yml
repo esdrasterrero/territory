@@ -1,3 +1,8 @@
+easyprint-general:
+  version: 1.x
+  css:
+    component:
+      css/leaflet_easyprint_general.css: {}
 leaflet.easyprint:
   version: VERSION
   js:
@@ -11,3 +16,4 @@ leaflet-drupal:
     - leaflet/leaflet
     - core/jquery
     - core/drupal
+    - core/drupalSettings

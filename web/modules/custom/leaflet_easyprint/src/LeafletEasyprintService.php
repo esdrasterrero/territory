@@ -25,6 +25,8 @@ class LeafletEasyprintService extends LeafletService {
   public function leafletRenderMap(array $map, array $features = [], $height = '400px') {
     // Attach the EasyPrint library.
     $build = parent::leafletRenderMap($map, $features, $height);
+
+    $build["#attached"]["library"][] = 'leaflet_easyprint/easyprint-general';
     $build["#attached"]["library"][] = 'leaflet_easyprint/leaflet.easyprint';
     $build["#attached"]["library"][] = 'leaflet_easyprint/leaflet-drupal';
     return $build;
