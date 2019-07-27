@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.field.node.territory.field_geofield
     - field.field.node.territory.field_last_worked
-    - field.field.node.territory.field_name
     - field.field.node.territory.field_term_territory
     - field.field.node.territory.field_territory_id
     - node.type.territory
@@ -65,14 +64,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
-    region: content
-  field_name:
-    weight: 121
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
     region: content
   field_term_territory:
     weight: 124

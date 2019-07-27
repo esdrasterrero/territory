@@ -1,10 +1,10 @@
 definitions:
   contact__site_page:
-    enabled: true
+    enabled: false
     menu_name: footer
     parent: ''
-    weight: 0
     expanded: false
+    weight: 0
   system__admin_content:
     menu_name: admin
     parent: system.admin

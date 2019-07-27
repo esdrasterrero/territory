@@ -1,0 +1,33 @@
+uuid: 028efc4e-0fcc-41ef-a67d-bf6d00fd66d5
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: territory_node_path_english
+label: 'Territory node path English'
+type: 'canonical_entities:node'
+pattern: 'territory/[node:title]'
+selection_criteria:
+  d0e26eeb-7226-4e5b-b0b4-c6c1c32d6e8c:
+    id: node_type
+    bundles:
+      territory: territory
+    negate: false
+    context_mapping:
+      node: node
+    uuid: d0e26eeb-7226-4e5b-b0b4-c6c1c32d6e8c
+  36b3d09a-8635-41f8-a9f2-f089649db64c:
+    id: language
+    langcodes:
+      en: en
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: 36b3d09a-8635-41f8-a9f2-f089649db64c
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language
