@@ -1,18 +1,17 @@
-uuid: b892f3bb-5c6d-41ce-837d-591362efeb69
+uuid: a268c71e-7085-4c24-81f7-4a32c92e05cc
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_name
     - node.type.territory
-id: node.territory.field_name
-field_name: field_name
+id: node.territory.title
+field_name: title
 entity_type: node
 bundle: territory
 label: Name
 description: ''
-required: false
-translatable: false
+required: true
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

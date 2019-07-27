@@ -43,6 +43,7 @@ module:
   language: 0
   layout_discovery: 0
   leaflet: 0
+  leaflet_easyprint: 0
   leaflet_views: 0
   leaflet_widget: 0
   libraries: 0
@@ -55,6 +56,7 @@ module:
   path: 0
   quickedit: 0
   rdf: 0
+  responsive_favicons: 0
   search: 0
   shortcut: 0
   syslog: 0
