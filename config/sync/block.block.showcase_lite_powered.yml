@@ -3,6 +3,7 @@ langcode: es
 status: true
 dependencies:
   module:
+    - language
     - system
   theme:
     - showcase_lite
@@ -16,7 +17,15 @@ provider: null
 plugin: system_powered_by_block
 settings:
   id: system_powered_by_block
-  label: 'Funciona con Drupal'
+  label: 'Territory 2019'
   provider: system
-  label_display: '0'
-visibility: {  }
+  label_display: visible
+visibility:
+  language:
+    id: language
+    langcodes:
+      en: en
+      es: es
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'

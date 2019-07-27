@@ -1,10 +1,10 @@
 breadcrumb_separator: fa-angle-right
-scroll_to_top_display: true
+scroll_to_top_display: 1
 scroll_to_top_icon: fa-angle-up
 scroll_to_top_region: footer-to-top-enabled
 bootstrap_remote_type: cdn
 color_scheme: gray
-page_container_border: true
+page_container_border: 0
 animations_state: false
 slideout_background_color: 'region--light-typography region--dark-background'
 slideout_side: left
@@ -25,7 +25,7 @@ header_layout_container: container-fluid
 header_background_color: 'region--dark-typography region--gray-background'
 header_blocks_paddings: false
 header_region_paddings: false
-fixed_header: true
+fixed_header: 1
 banner_layout_container: container-fluid
 banner_background_color: 'region--dark-typography region--gray-background'
 banner_blocks_paddings: true
@@ -176,3 +176,14 @@ google_maps_key: AIzaSyDyL-4KyWw_3hp-0jmZLGcJ3zMWkkJ44VI
 _core:
   default_config_hash: Wr6gIFTlKPv78tt0GfjaEf3O-DvlTIrEwztZHauul1Q
 langcode: es
+features:
+  node_user_picture: true
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: true
+logo:
+  use_default: false
+  path: territory.png
+favicon:
+  use_default: true
+premium_description: ''
