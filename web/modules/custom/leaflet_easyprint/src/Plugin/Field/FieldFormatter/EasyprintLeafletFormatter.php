@@ -26,6 +26,7 @@ class EasyprintLeafletFormatter extends LeafletDefaultFormatter {
     $settings = parent::defaultSettings();
     $settings['easyprint_width'] = 100;
     $settings['easyprint_height'] = 100;
+    $settings['easyprint_export'] = 0;
 
     return $settings;
   }
@@ -38,6 +39,7 @@ class EasyprintLeafletFormatter extends LeafletDefaultFormatter {
     $form['#tree'] = TRUE;
     $settings = $this->getSettings();
     $elements = parent::settingsForm($form, $form_state);
+
     $elements['easyprint_width'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Easyprint custom width'),
@@ -50,6 +52,12 @@ class EasyprintLeafletFormatter extends LeafletDefaultFormatter {
       '#description' => $this->t('Define a set width for the easyprint image'),
       '#default_value' => $settings['easyprint_height'],
     ];
+    $elements['easyprint_export'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Easyprint Export setting'),
+      '#description' => $this->t('Enable export only mode. This downloads the map to a PNG file.'),
+      '#default_value' => $settings['easyprint_export'],
+    ];
 
     return $elements;
   }
@@ -61,6 +69,7 @@ class EasyprintLeafletFormatter extends LeafletDefaultFormatter {
     $summary = parent::settingsSummary();
     $summary[] = $this->t('EasyPrint width: @width', ['@width' => $this->getSetting('easyprint_width')]);
     $summary[] = $this->t('EasyPrint height: @height', ['@height' => $this->getSetting('easyprint_height')]);
+    $summary[] = $this->t('EasyPrint export only: @exportonly', ['@exportonly' => $this->getSetting('easyprint_export')]);
 
     return $summary;
   }
@@ -74,6 +83,7 @@ class EasyprintLeafletFormatter extends LeafletDefaultFormatter {
     $element = parent::viewElements($items, $langcode);
     $element['#attached']['drupalSettings']['leaflet']['easyPrint']['easyprint_width'] = $this->getSetting('easyprint_width');
     $element['#attached']['drupalSettings']['leaflet']['easyPrint']['easyprint_height'] = $this->getSetting('easyprint_height');
+    $element['#attached']['drupalSettings']['leaflet']['easyPrint']['easyprint_export'] = $this->getSetting('easyprint_export');
 
     return $element;
   }
