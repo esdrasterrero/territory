@@ -1,0 +1,14 @@
+{
+  "name": "drupal/leaflet_easyprint",
+  "type": "drupal-module",
+  "description": "A leaflet plugin that generates a printable map image from a leaflet map.",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/leaflet_easyprint",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/leaflet_easyprint",
+    "source": "http://cgit.drupalcode.org/leaflet_easyprint"
+  },
+  "require": { }
+}
