@@ -25,11 +25,24 @@
               "type": "zip"
             }
           }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "bootstrap/bootstrap-toggle",
+                "version": "2.2.2",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/minhur/bootstrap-toggle/archive/2.2.2.zip",
+                    "type": "zip"
+                }
+            }
         }
 
     ],
     "require": {
         "arthur-e/wicket": "^1.3",
+        "bootstrap/bootstrap-toggle": "^2.2",
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6",
         "drupal-composer/drupal-scaffold": "^2.2",
