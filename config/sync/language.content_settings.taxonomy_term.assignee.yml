@@ -1,0 +1,11 @@
+uuid: 50530982-1269-421f-97a7-60b0bf7cd8b3
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.assignee
+id: taxonomy_term.assignee
+target_entity_type_id: taxonomy_term
+target_bundle: assignee
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,24 @@
+uuid: 94feecb5-383e-4717-91da-88ccfb98ca7d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_assign_date
+    - node.type.territory
+  module:
+    - datetime
+id: node.territory.field_assign_date
+field_name: field_assign_date
+entity_type: node
+bundle: territory
+label: 'Fecha asignado'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,16 +1,16 @@
-uuid: df1be19d-1e10-44ce-8d90-9700a22a55d2
-langcode: en
+uuid: aff02376-55ac-4972-b99d-509077ba477c
+langcode: es
 status: true
 dependencies:
   config:
-    - field.storage.node.field_term_territory
+    - field.storage.node.field_term_assignee
     - node.type.territory
-    - taxonomy.vocabulary.territory
-id: node.territory.field_term_territory
-field_name: field_term_territory
+    - taxonomy.vocabulary.assignee
+id: node.territory.field_term_assignee
+field_name: field_term_assignee
 entity_type: node
 bundle: territory
-label: 'Territorio (Etiqueta)'
+label: Asignado
 description: ''
 required: false
 translatable: false
@@ -20,10 +20,10 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      territory: territory
+      assignee: assignee
     sort:
       field: name
       direction: asc
-    auto_create: true
+    auto_create: false
     auto_create_bundle: ''
 field_type: entity_reference
