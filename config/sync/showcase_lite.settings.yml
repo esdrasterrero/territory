@@ -25,7 +25,7 @@ header_layout_container: container-fluid
 header_background_color: 'region--dark-typography region--gray-background'
 header_blocks_paddings: false
 header_region_paddings: false
-fixed_header: 1
+fixed_header: 0
 banner_layout_container: container-fluid
 banner_background_color: 'region--dark-typography region--gray-background'
 banner_blocks_paddings: true
@@ -185,5 +185,7 @@ logo:
   use_default: false
   path: territory.png
 favicon:
-  use_default: true
+  use_default: false
+  path: sites/default/files/favicons/favicon.ico
+  mimetype: image/vnd.microsoft.icon
 premium_description: ''

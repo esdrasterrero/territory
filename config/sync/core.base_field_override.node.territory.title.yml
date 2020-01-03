@@ -8,7 +8,7 @@ id: node.territory.title
 field_name: title
 entity_type: node
 bundle: territory
-label: Name
+label: Nombre
 description: ''
 required: true
 translatable: true

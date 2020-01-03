@@ -11,7 +11,7 @@ id: node.territory.field_last_worked
 field_name: field_last_worked
 entity_type: node
 bundle: territory
-label: 'Last worked'
+label: 'Fecha trabajado'
 description: 'The date in which this territory has last been worked on.'
 required: false
 translatable: false

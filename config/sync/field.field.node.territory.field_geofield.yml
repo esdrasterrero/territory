@@ -11,7 +11,7 @@ id: node.territory.field_geofield
 field_name: field_geofield
 entity_type: node
 bundle: territory
-label: Geofield
+label: Mapa
 description: ''
 required: false
 translatable: true

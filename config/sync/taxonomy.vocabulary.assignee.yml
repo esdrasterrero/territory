@@ -1,0 +1,8 @@
+uuid: e48c523c-5545-4fbf-9f2d-2b607091189c
+langcode: en
+status: true
+dependencies: {  }
+name: Assignee
+vid: assignee
+description: 'The person responsible for working the territory'
+weight: 0

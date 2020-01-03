@@ -590,13 +590,13 @@ display:
         menu_name: admin
         weight: -10
       display_extenders: {  }
+      rendering_language: '***LANGUAGE_language_interface***'
     display_plugin: page
     display_title: Página
     id: page_1
     position: 1
     cache_metadata:
       contexts:
-        - 'languages:language_content'
         - 'languages:language_interface'
         - url
         - url.query_args

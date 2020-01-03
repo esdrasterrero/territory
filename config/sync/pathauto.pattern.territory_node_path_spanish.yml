@@ -10,22 +10,22 @@ label: 'Territory node path Spanish'
 type: 'canonical_entities:node'
 pattern: 'territorio/[node:title]'
 selection_criteria:
-  b53a7ce6-22e1-4afa-9de4-4e5471141186:
+  8edfef2f-04e3-43b3-a8d0-26b3b2533e5c:
     id: node_type
     bundles:
       territory: territory
     negate: false
     context_mapping:
       node: node
-    uuid: b53a7ce6-22e1-4afa-9de4-4e5471141186
-  c6c1f640-0042-4e58-ad5b-21645c6425ef:
+    uuid: 8edfef2f-04e3-43b3-a8d0-26b3b2533e5c
+  5222a98f-1e7e-467b-9397-f9b42a3774ca:
     id: language
     langcodes:
       es: es
     negate: false
     context_mapping:
       language: 'node:langcode:language'
-    uuid: c6c1f640-0042-4e58-ad5b-21645c6425ef
+    uuid: 5222a98f-1e7e-467b-9397-f9b42a3774ca
 selection_logic: and
 weight: -10
 relationships:
