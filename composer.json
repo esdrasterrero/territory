@@ -49,6 +49,7 @@
         "drupal/address": "~1.0",
         "drupal/admin_toolbar": "^1.26",
         "drupal/backup_migrate": "^4.0",
+        "drupal/config_split": "^1.4",
         "drupal/console": "^1.0.2",
         "drupal/core": "^8.7.0",
         "drupal/flag": "4.x-dev",
