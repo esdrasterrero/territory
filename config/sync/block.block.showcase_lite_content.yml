@@ -11,12 +11,12 @@ _core:
 id: showcase_lite_content
 theme: showcase_lite
 region: content
-weight: -3
+weight: -4
 provider: null
 plugin: system_main_block
 settings:
   id: system_main_block
-  label: 'Contenido principal de la página'
+  label: 'Main page content'
   provider: system
   label_display: '0'
 visibility: {  }

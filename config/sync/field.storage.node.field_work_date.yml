@@ -1,19 +1,19 @@
-uuid: 5d29ad65-5901-45fc-8197-d963a85d7335
+uuid: b7eb6c1e-8028-422b-abd9-d1759824b948
 langcode: en
 status: true
 dependencies:
   module:
     - datetime
     - node
-id: node.field_last_worked
-field_name: field_last_worked
+id: node.field_work_date
+field_name: field_work_date
 entity_type: node
 type: datetime
 settings:
   datetime_type: date
 module: datetime
 locked: false
-cardinality: 1
+cardinality: -1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

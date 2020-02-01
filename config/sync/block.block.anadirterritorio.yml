@@ -12,7 +12,7 @@ dependencies:
 id: anadirterritorio
 theme: showcase_lite
 region: content
-weight: 0
+weight: -2
 provider: null
 plugin: 'block_content:21c91c2d-7e98-456a-ab39-69e408961559'
 settings:
