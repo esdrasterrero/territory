@@ -4,10 +4,12 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.territory.field_assign_date
     - field.field.node.territory.field_geofield
-    - field.field.node.territory.field_last_worked
+    - field.field.node.territory.field_term_assignee
     - field.field.node.territory.field_term_territory
     - field.field.node.territory.field_territory_id
+    - field.field.node.territory.field_work_date
     - node.type.territory
   module:
     - field_layout
@@ -26,9 +28,11 @@ hidden:
   entity_print_view_epub: true
   entity_print_view_pdf: true
   entity_print_view_word_docx: true
+  field_assign_date: true
   field_geofield: true
-  field_last_worked: true
+  field_term_assignee: true
   field_term_territory: true
   field_territory_id: true
+  field_work_date: true
   langcode: true
   links: true
