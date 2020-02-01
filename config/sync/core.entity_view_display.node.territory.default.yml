@@ -5,10 +5,10 @@ dependencies:
   config:
     - field.field.node.territory.field_assign_date
     - field.field.node.territory.field_geofield
-    - field.field.node.territory.field_last_worked
     - field.field.node.territory.field_term_assignee
     - field.field.node.territory.field_term_territory
     - field.field.node.territory.field_territory_id
+    - field.field.node.territory.field_work_date
     - node.type.territory
   module:
     - field_layout
@@ -75,6 +75,18 @@ content:
       leaflet_markercluster:
         control: 0
         options: '{"spiderfyOnMaxZoom":true,"showCoverageOnHover":true,"removeOutsideVisibleBounds": false}'
+      height_unit: px
+      geocoder:
+        control: 0
+        settings:
+          position: topright
+          input_size: 25
+          providers: {  }
+          min_terms: 4
+          delay: 800
+          zoom: 16
+          popup: 0
+          options: ''
     third_party_settings: {  }
     type: leaflet_formatter_easyprint
     region: content
@@ -82,9 +94,9 @@ hidden:
   entity_print_view_epub: true
   entity_print_view_word_docx: true
   field_assign_date: true
-  field_last_worked: true
   field_term_assignee: true
   field_term_territory: true
   field_territory_id: true
+  field_work_date: true
   langcode: true
   links: true

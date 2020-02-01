@@ -1,18 +1,18 @@
-uuid: c0e77fb5-646c-4bde-ad02-253cc8c6f517
+uuid: f90551cb-9ef5-4687-bc2d-d3c3c594da09
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_last_worked
+    - field.storage.node.field_work_date
     - node.type.territory
   module:
     - datetime
-id: node.territory.field_last_worked
-field_name: field_last_worked
+id: node.territory.field_work_date
+field_name: field_work_date
 entity_type: node
 bundle: territory
 label: 'Fecha trabajado'
-description: 'The date in which this territory has last been worked on.'
+description: ''
 required: false
 translatable: false
 default_value: {  }

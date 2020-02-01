@@ -11,12 +11,12 @@ _core:
 id: showcase_lite_help
 theme: showcase_lite
 region: content
-weight: -7
+weight: -8
 provider: null
 plugin: help_block
 settings:
   id: help_block
-  label: Ayuda
+  label: Help
   provider: help
   label_display: '0'
 visibility: {  }
