@@ -53,7 +53,7 @@
         "drupal/core": "^8.8.0",
         "drupal/core-composer-scaffold": "^8.8",
         "drupal/core-recommended": "^8.8",
-        "drupal/flag": "4.0-beta1",
+        "drupal/flag": "^4.0",
         "drupal/geocoder": "^2.0@beta",
         "drupal/geocoder_autocomplete": "1.x-dev",
         "drupal/geofield": "^1.1",
