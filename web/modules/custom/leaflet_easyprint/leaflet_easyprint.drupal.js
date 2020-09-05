@@ -34,6 +34,7 @@
               var s12Portrait = {
                 width: easyPrintHeight,
                 height: easyPrintWidth,
+                name: 's12 Portrait',
                 className: 's12Portrait',
                 tooltip: 's12 Form size portrait mode'
               };
@@ -41,6 +42,7 @@
               var s12Landscape = {
                 width: easyPrintWidth,
                 height: easyPrintHeight,
+                name: 's12 Landscape',
                 className: 's12Landscape',
                 tooltip: 's12 Form size landscape mode'
               };
