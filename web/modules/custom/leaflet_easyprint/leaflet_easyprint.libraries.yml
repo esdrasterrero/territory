@@ -11,7 +11,7 @@ leaflet.easyprint:
 leaflet-drupal:
   version: VERSION
   js:
-    leaflet_easyprint.drupal.js: {}
+    js/leaflet_easyprint.drupal.js: {}
   dependencies:
     - leaflet/leaflet
     - core/jquery
