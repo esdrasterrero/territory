@@ -48,7 +48,7 @@ display:
           role:
             authenticated: authenticated
       cache:
-        type: tag
+        type: none
         options: {  }
       query:
         type: views_query
@@ -2332,7 +2332,6 @@ display:
             title: title
             field_term_assignee: field_term_assignee
             field_assign_date: field_assign_date
-            field_last_worked: field_last_worked
             edit_node_1: edit_node_1
           info:
             field_term_territory:
@@ -2364,13 +2363,6 @@ display:
               empty_column: false
               responsive: ''
             field_assign_date:
-              sortable: true
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            field_last_worked:
               sortable: true
               default_sort_order: asc
               align: ''
@@ -2416,22 +2408,7 @@ display:
           entity_type: taxonomy_term
           plugin_id: entity_reverse
       use_ajax: false
-      sorts:
-        changed:
-          id: changed
-          table: node_field_data
-          field: changed
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: DESC
-          exposed: true
-          expose:
-            label: Modificado
-          granularity: day
-          entity_type: node
-          entity_field: changed
-          plugin_id: date
+      sorts: {  }
     cache_metadata:
       max-age: -1
       contexts:
@@ -2439,8 +2416,6 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
-        - 'url.query_args:sort_by'
-        - 'url.query_args:sort_order'
         - user
         - 'user.node_grants:view'
         - user.roles
