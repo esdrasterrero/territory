@@ -67,6 +67,8 @@
         "drupal/thunder_admin": "^3.5",
         "drupal/toggle_editable_fields": "1.x-dev",
         "drupal/verf": "^1.0",
+        "drupal/views_bulk_edit": "^2.6",
+        "drupal/views_bulk_operations": "~4.0.1",
         "drush/drush": "^9.0.0",
         "vlucas/phpdotenv": "^2.4",
         "webflo/drupal-finder": "^1.0.0",

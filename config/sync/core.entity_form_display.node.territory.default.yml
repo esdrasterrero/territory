@@ -43,9 +43,10 @@ content:
     settings:
       map:
         leaflet_map: 'OSM Mapnik'
-        height: '400'
+        height: '800'
         auto_center: '1'
         map_position:
+          force: '1'
           center:
             lat: '51.9244'
             lon: '4.4777'
@@ -53,10 +54,9 @@ content:
           minZoom: '1'
           maxZoom: '18'
           zoomFiner: '0'
-          force: 0
-        locate: '1'
         scroll_zoom_enabled: '1'
         fullscreen_control: '1'
+        locate: 0
       input:
         show: '1'
         readonly: 0
@@ -80,6 +80,9 @@ content:
           position: topright
           input_size: '25'
           providers:
+            googlemaps:
+              checked: '1'
+              weight: '0'
             arcgisonline:
               weight: '0'
               checked: 0
@@ -105,9 +108,6 @@ content:
               weight: '0'
               checked: 0
             geonames:
-              weight: '0'
-              checked: 0
-            googlemaps:
               weight: '0'
               checked: 0
             googlemaps_business:
