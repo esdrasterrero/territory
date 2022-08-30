@@ -1,0 +1,70 @@
+#!/bin/bash
+## Description: Run update sequences in the web container
+## Usage: update
+## Example: "ddev update"
+## Flags: [{"Name":"core","Shorthand":"c","Usage":"Updates drupal core"},{"Name":"module","Shorthand":"m","Usage":"Updates minor versions of modules"}]
+source "$(dirname "$0")/common.sh"
+# Process parameters, if something not allowed the script exists.
+params="$(getopt -o cm: -l core,module: --name "$0" -- "$@")" || exit
+eval set -- "$params"
+
+PARAMETER=
+MODULE=
+while true
+do
+    case $1 in
+        -c|--core)
+            PARAMETER="core"
+            shift
+            break
+            ;;
+        -m|--module)
+            PARAMETER="module"
+            MODULE="$2"
+            shift
+            break
+            ;;
+        --)
+            shift
+            break
+            ;;
+    esac
+done
+
+log "\e[36m--------- Updating packages & site ---------\e[39m"
+
+log "Go to the project root."
+cd "${PWD}" || exit 1;
+
+# This piece will always run.
+log "Installing composer dependencies (with development dependencies)."
+composer install --no-interaction --no-progress --apcu-autoloader || exit 1;
+log "Composer packages are installed"
+log "Running database and config updates"
+drush updatedb --no-cache-clear
+drush cache:rebuild
+# Drush cache clear.
+drush cache:clear drush
+drush config:import -y
+drush cache:rebuild
+log "Database and configuration updates are finished"
+
+if [[ "$PARAMETER" = "core" || "$PARAMETER" = "module" ]]; then
+    log "\e[36m--------- Updating $PARAMETER with dependencies ---------\e[39m"
+
+    if [[ "$PARAMETER" = "core" ]]; then
+      composer update drupal/core 'drupal/core-*' --with-all-dependencies
+    fi
+
+    if [[ "$PARAMETER" = "module" ]]; then
+      composer update 'drupal/$MODULE' --with-all-dependencies
+    fi
+
+    drush updatedb -y
+    drush cache:rebuild
+    drush config:export -y
+    log "\e[36m--------- $PARAMETER and configuration updates are finished ---------\e[39m"
+fi
+
+log "\e[36m--------- Use this URL to log in ---------\e[39m"
+drush uli
