@@ -1,3 +1,6 @@
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
+langcode: es
 uuid: 937eee82-c9ab-4c1b-bb27-2bae312b3ba6
 name: Territory
 mail: esdrasterrero89@gmail.com
@@ -8,8 +11,5 @@ page:
   front: /territories
 admin_compact_mode: false
 weight_select_max: 100
-langcode: es
 default_langcode: es
-_core:
-  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
 mail_notification: ''

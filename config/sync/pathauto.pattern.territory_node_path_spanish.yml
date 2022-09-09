@@ -11,21 +11,21 @@ type: 'canonical_entities:node'
 pattern: 'territorio/[node:title]'
 selection_criteria:
   8edfef2f-04e3-43b3-a8d0-26b3b2533e5c:
-    id: node_type
-    bundles:
-      territory: territory
+    id: 'entity_bundle:node'
     negate: false
+    uuid: 8edfef2f-04e3-43b3-a8d0-26b3b2533e5c
     context_mapping:
       node: node
-    uuid: 8edfef2f-04e3-43b3-a8d0-26b3b2533e5c
+    bundles:
+      territory: territory
   5222a98f-1e7e-467b-9397-f9b42a3774ca:
     id: language
-    langcodes:
-      es: es
     negate: false
+    uuid: 5222a98f-1e7e-467b-9397-f9b42a3774ca
     context_mapping:
       language: 'node:langcode:language'
-    uuid: 5222a98f-1e7e-467b-9397-f9b42a3774ca
+    langcodes:
+      es: es
 selection_logic: and
 weight: -10
 relationships:

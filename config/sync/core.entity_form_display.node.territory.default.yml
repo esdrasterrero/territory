@@ -33,154 +33,154 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_assign_date:
+    type: datetime_default
     weight: 9
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: datetime_default
-    region: content
   field_geofield:
+    type: leaflet_widget_default
     weight: 26
+    region: content
     settings:
       map:
         leaflet_map: 'OSM Mapnik'
-        height: '800'
-        auto_center: '1'
-        map_position:
-          force: '1'
-          center:
-            lat: '51.9244'
-            lon: '4.4777'
-          zoom: '14'
-          minZoom: '1'
-          maxZoom: '18'
-          zoomFiner: '0'
-        scroll_zoom_enabled: '1'
-        fullscreen_control: '1'
+        height: 800
         locate: 0
+        auto_center: 1
+        map_position:
+          force: true
+          center:
+            lat: 51.9244
+            lon: 4.4777
+          zoom: 14
+          minZoom: 1
+          maxZoom: 18
+          zoomFiner: 0
+        scroll_zoom_enabled: 1
+        fullscreen_control: '1'
       input:
-        show: '1'
-        readonly: 0
+        show: true
+        readonly: false
       toolbar:
         position: topright
-        drawMarker: '1'
-        drawPolygon: '1'
-        editMode: '1'
-        dragMode: '1'
-        removalMode: '1'
-        drawPolyline: 0
-        drawRectangle: 0
+        drawMarker: true
+        drawPolyline: false
+        drawRectangle: false
+        drawPolygon: true
         drawCircle: false
         drawCircleMarker: false
-        cutPolygon: 0
+        editMode: true
+        dragMode: true
+        cutPolygon: false
+        removalMode: true
       reset_map:
         position: topright
-        control: 0
+        control: false
       geocoder:
+        control: false
         settings:
           position: topright
-          input_size: '25'
+          input_size: 25
           providers:
             googlemaps:
-              checked: '1'
-              weight: '0'
+              weight: 0
+              checked: true
             arcgisonline:
-              weight: '0'
-              checked: 0
+              weight: 0
+              checked: false
             bingmaps:
-              weight: '0'
-              checked: 0
+              weight: 0
+              checked: false
             file:
-              weight: '0'
-              checked: 0
+              weight: 0
+              checked: false
             freegeoip:
-              weight: '0'
-              checked: 0
+              weight: 0
+              checked: false
             gpxfile:
-              weight: '0'
-              checked: 0
+              weight: 0
+              checked: false
             geojsonfile:
-              weight: '0'
-              checked: 0
+              weight: 0
+              checked: false
             geoplugin:
-              weight: '0'
-              checked: 0
+              weight: 0
+              checked: false
             geoip:
-              weight: '0'
-              checked: 0
+              weight: 0
+              checked: false
             geonames:
-              weight: '0'
-              checked: 0
+              weight: 0
+              checked: false
             googlemaps_business:
-              weight: '0'
-              checked: 0
+              weight: 0
+              checked: false
             hostip:
-              weight: '0'
-              checked: 0
+              weight: 0
+              checked: false
             ipinfodb:
-              weight: '0'
-              checked: 0
+              weight: 0
+              checked: false
             kmlfile:
-              weight: '0'
-              checked: 0
+              weight: 0
+              checked: false
             mapquest:
-              weight: '0'
-              checked: 0
+              weight: 0
+              checked: false
             maxmind:
-              weight: '0'
-              checked: 0
+              weight: 0
+              checked: false
             nominatim:
-              weight: '0'
-              checked: 0
+              weight: 0
+              checked: false
             opencage:
-              weight: '0'
-              checked: 0
+              weight: 0
+              checked: false
             openstreetmap:
-              weight: '0'
-              checked: 0
+              weight: 0
+              checked: false
             random:
-              weight: '0'
-              checked: 0
+              weight: 0
+              checked: false
             tomtom:
-              weight: '0'
-              checked: 0
+              weight: 0
+              checked: false
             yandex:
-              weight: '0'
-              checked: 0
-          min_terms: '4'
-          delay: '800'
-          zoom: '16'
+              weight: 0
+              checked: false
+          min_terms: 4
+          delay: 800
+          zoom: 16
+          popup: false
           options: ''
-          popup: 0
-        control: 0
     third_party_settings: {  }
-    type: leaflet_widget_default
-    region: content
   field_term_assignee:
+    type: entity_reference_autocomplete
     weight: 8
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
     third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
   field_term_territory:
+    type: entity_reference_autocomplete
     weight: 10
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
     third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
   field_work_date:
+    type: datetime_default
     weight: 11
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: datetime_default
-    region: content
   langcode:
     type: language_select
     weight: 1
@@ -196,24 +196,24 @@ content:
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 4
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 7
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 5
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -226,12 +226,12 @@ content:
   uid:
     type: entity_reference_autocomplete
     weight: 2
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
-    region: content
     third_party_settings: {  }
 hidden:
   field_territory_id: true

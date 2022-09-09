@@ -25,12 +25,12 @@ bundle: territory
 mode: default
 content:
   entity_print_view_pdf:
-    weight: 5
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 5
+    region: content
   field_geofield:
-    weight: 0
+    type: leaflet_formatter_easyprint
     label: hidden
     settings:
       multiple_map: '0'
@@ -88,7 +88,7 @@ content:
           popup: 0
           options: ''
     third_party_settings: {  }
-    type: leaflet_formatter_easyprint
+    weight: 0
     region: content
 hidden:
   entity_print_view_epub: true

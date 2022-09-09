@@ -1,3 +1,6 @@
+_core:
+  default_config_hash: GB9C_77zlsCsibBg5Cf3E4yntcBIoWCrrlZIooCpoUY
+langcode: es
 gmap_api_key: AIzaSyCe74HBtMklU9cdwQMSXOh-pNfhRtp8WzM
 theming:
   markers_location:
@@ -8,6 +11,3 @@ theming:
 geocoder:
   caching:
     clientside: session_storage
-_core:
-  default_config_hash: GB9C_77zlsCsibBg5Cf3E4yntcBIoWCrrlZIooCpoUY
-langcode: es
