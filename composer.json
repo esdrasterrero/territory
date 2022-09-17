@@ -54,7 +54,7 @@
         "drupal/core-project-message": "^9",
         "drupal/core-recommended": "^9",
         "drupal/flag": "^4.0",
-        "drupal/geocoder": "^2.0@beta",
+        "drupal/geocoder": "^3.30",
         "drupal/geocoder_autocomplete": "^2.0",
         "drupal/geofield": "^1.1",
         "drupal/geofield_map": "2.80",

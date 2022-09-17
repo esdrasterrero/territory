@@ -1,0 +1,33 @@
+uuid: 83d16151-5551-4aee-b4a7-8a244106e2b8
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.territory_view
+  module:
+    - node
+    - views
+  theme:
+    - showcase_lite
+id: views_block__territory_view_block_territory_last_work_date
+theme: showcase_lite
+region: content
+weight: -3
+provider: null
+plugin: 'views_block:territory_view-block_territory_last_work_date'
+settings:
+  id: 'views_block:territory_view-block_territory_last_work_date'
+  label: 'Trabajado Ultimamente'
+  label_display: visible
+  provider: views
+  context_mapping: {  }
+  views_label: 'Trabajado Ultimamente'
+  items_per_page: none
+visibility:
+  node_type:
+    id: node_type
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      territory: territory
