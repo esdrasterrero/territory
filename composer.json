@@ -48,6 +48,7 @@
         "drupal/address": "^1.9",
         "drupal/admin_toolbar": "^2.3",
         "drupal/backup_migrate": "^5.0",
+        "drupal/barcodes": "^2.0",
         "drupal/config_split": "^1.4",
         "drupal/console": "^1.0.2",
         "drupal/core-composer-scaffold": "^9",

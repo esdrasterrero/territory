@@ -1,4 +1,4 @@
-uuid: 2bcb5e16-d2e8-4abc-b41c-66cb8ede17e1
+uuid: 60ab97a7-b8bc-453e-8125-6d7f2e7af2dc
 langcode: es
 status: true
 dependencies:
@@ -6,14 +6,13 @@ dependencies:
     - 'block_content:basic:21c91c2d-7e98-456a-ab39-69e408961559'
   module:
     - block_content
-    - node
-    - user
+    - system
   theme:
     - olivero
-id: addterritory_block
+id: add_territory_bottom_block
 theme: olivero
-region: sidebar
-weight: 0
+region: content
+weight: -6
 provider: null
 plugin: 'block_content:21c91c2d-7e98-456a-ab39-69e408961559'
 settings:
@@ -25,17 +24,7 @@ settings:
   info: ''
   view_mode: full
 visibility:
-  user_role:
-    id: user_role
+  request_path:
+    id: request_path
     negate: false
-    context_mapping:
-      user: '@user.current_user_context:current_user'
-    roles:
-      authenticated: authenticated
-  'entity_bundle:node':
-    id: 'entity_bundle:node'
-    negate: false
-    context_mapping:
-      node: '@node.node_route_context:node'
-    bundles:
-      territory: territory
+    pages: "<front>\r\n/territory"

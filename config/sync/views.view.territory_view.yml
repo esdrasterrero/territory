@@ -2142,9 +2142,9 @@ display:
           click_sort_column: value
           type: boolean
           settings:
-            format: unicode-yes-no
+            format: custom
             format_custom_false: ''
-            format_custom_true: ''
+            format_custom_true: ✔
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -2375,8 +2375,9 @@ display:
             title: title
             field_term_assignee: field_term_assignee
             field_assign_date: field_assign_date
-            edit_node_1: edit_node_1
             field_return_date: field_return_date
+            field_personal_territory: field_personal_territory
+            edit_node_1: edit_node_1
           default: '-1'
           info:
             field_term_territory:
@@ -2384,14 +2385,14 @@ display:
               default_sort_order: asc
               align: ''
               separator: ''
-              empty_column: false
+              empty_column: true
               responsive: ''
             nid:
               sortable: false
               default_sort_order: asc
               align: ''
               separator: ''
-              empty_column: false
+              empty_column: true
               responsive: ''
             title:
               sortable: true
@@ -2414,15 +2415,22 @@ display:
               separator: ''
               empty_column: false
               responsive: ''
-            edit_node_1:
+            field_return_date:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_personal_territory:
               sortable: false
               default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
               responsive: ''
-            field_return_date:
-              sortable: true
+            edit_node_1:
+              sortable: false
               default_sort_order: asc
               align: ''
               separator: ''
