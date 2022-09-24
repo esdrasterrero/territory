@@ -13,7 +13,8 @@ dependencies:
 third_party_settings:
   field_layout:
     id: layout_onecol
-    settings: {  }
+    settings:
+      label: ''
 _core:
   default_config_hash: UWTnZUj-u-jp8I_S1C1nUCTlM5iIV2QKdxm37ehFjoI
 id: node.book.default
@@ -22,16 +23,16 @@ bundle: book
 mode: default
 content:
   body:
-    label: hidden
     type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
     weight: 100
     region: content
+  links:
     settings: {  }
     third_party_settings: {  }
-  links:
     weight: 101
     region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
   langcode: true

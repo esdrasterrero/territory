@@ -13,25 +13,26 @@ dependencies:
 third_party_settings:
   field_layout:
     id: layout_onecol
-    settings: {  }
+    settings:
+      label: ''
 id: taxonomy_term.territory.default
 targetEntityType: taxonomy_term
 bundle: territory
 mode: default
 content:
   field_territory_number:
+    type: number
     weight: 1
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    type: number
-    region: content
   field_territory_zone:
+    type: options_select
     weight: 2
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   name:
     type: string_textfield
     weight: 0
@@ -39,6 +40,13 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 100
+    region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
 hidden:
   description: true

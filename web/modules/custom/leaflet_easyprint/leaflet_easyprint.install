@@ -1,0 +1,34 @@
+<?php
+
+/**
+ * Installation hooks for leaflet easyprint.
+ */
+
+use Drupal\Core\Extension\ModuleInstallerInterface;
+
+/**
+ * Uninstall unsupported modules.
+ */
+function leaflet_easyprint_update_9401() {
+  try {
+    /* @var \Drupal\Core\Extension\ModuleInstallerInterface $moduleInstaller */
+    $modules = [
+      'google_qr_code',
+      'toggle_editable_fields'
+    ];
+
+    $moduleInstaller = \Drupal::service('module_installer');
+    foreach ($modules as $module) {
+      if (!\Drupal::moduleHandler()->moduleExists($module)) {
+        $moduleInstaller->uninstall([$module]);
+      }
+    }
+    drupal_flush_all_caches();
+    $message = t('Uninstalled modules google_qr_code and toggle_editable_fields.');
+  }
+  catch (Exception $e) {
+    $message = $e->getMessage();
+  }
+
+  return $message;
+}

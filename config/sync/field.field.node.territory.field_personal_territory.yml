@@ -1,0 +1,23 @@
+uuid: 3bc04d8e-db75-4a2f-a051-fbd6d534c9a9
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_personal_territory
+    - node.type.territory
+id: node.territory.field_personal_territory
+field_name: field_personal_territory
+entity_type: node
+bundle: territory
+label: 'Territorio Personal'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activado
+  off_label: Desactivado
+field_type: boolean
