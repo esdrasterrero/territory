@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.field.node.territory.field_assign_date
     - field.field.node.territory.field_geofield
+    - field.field.node.territory.field_personal_territory
+    - field.field.node.territory.field_return_date
     - field.field.node.territory.field_term_assignee
     - field.field.node.territory.field_term_territory
     - field.field.node.territory.field_territory_id
@@ -34,13 +36,13 @@ content:
     third_party_settings: {  }
   field_assign_date:
     type: datetime_default
-    weight: 9
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
   field_geofield:
     type: leaflet_widget_default
-    weight: 26
+    weight: 14
     region: content
     settings:
       map:
@@ -58,95 +60,42 @@ content:
           maxZoom: 18
           zoomFiner: 0
         scroll_zoom_enabled: 1
-        fullscreen_control: '1'
       input:
         show: true
         readonly: false
       toolbar:
         position: topright
-        drawMarker: true
+        marker: defaultMarker
         drawPolyline: false
         drawRectangle: false
         drawPolygon: true
         drawCircle: false
-        drawCircleMarker: false
+        drawText: false
         editMode: true
         dragMode: true
         cutPolygon: false
         removalMode: true
+        rotateMode: false
       reset_map:
         position: topright
         control: false
+      fullscreen:
+        control: false
+        options: '{"position":"topleft","pseudoFullscreen":false}'
+      path: '{"color":"#3388ff","opacity":"1.0","stroke":true,"weight":3,"fill":"depends","fillColor":"*","fillOpacity":"0.2","radius":"6"}'
       geocoder:
         control: false
         settings:
           position: topright
           input_size: 25
           providers:
-            googlemaps:
-              weight: 0
-              checked: true
-            arcgisonline:
-              weight: 0
-              checked: false
-            bingmaps:
-              weight: 0
-              checked: false
             file:
-              weight: 0
-              checked: false
-            freegeoip:
               weight: 0
               checked: false
             gpxfile:
               weight: 0
               checked: false
-            geojsonfile:
-              weight: 0
-              checked: false
-            geoplugin:
-              weight: 0
-              checked: false
-            geoip:
-              weight: 0
-              checked: false
-            geonames:
-              weight: 0
-              checked: false
-            googlemaps_business:
-              weight: 0
-              checked: false
-            hostip:
-              weight: 0
-              checked: false
-            ipinfodb:
-              weight: 0
-              checked: false
-            kmlfile:
-              weight: 0
-              checked: false
-            mapquest:
-              weight: 0
-              checked: false
-            maxmind:
-              weight: 0
-              checked: false
-            nominatim:
-              weight: 0
-              checked: false
-            opencage:
-              weight: 0
-              checked: false
-            openstreetmap:
-              weight: 0
-              checked: false
             random:
-              weight: 0
-              checked: false
-            tomtom:
-              weight: 0
-              checked: false
-            yandex:
               weight: 0
               checked: false
           min_terms: 4
@@ -154,6 +103,20 @@ content:
           zoom: 16
           popup: false
           options: ''
+      geometry_validation: 0
+    third_party_settings: {  }
+  field_personal_territory:
+    type: boolean_checkbox
+    weight: 9
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_return_date:
+    type: datetime_default
+    weight: 11
+    region: content
+    settings: {  }
     third_party_settings: {  }
   field_term_assignee:
     type: entity_reference_autocomplete
@@ -167,7 +130,7 @@ content:
     third_party_settings: {  }
   field_term_territory:
     type: entity_reference_autocomplete
-    weight: 10
+    weight: 12
     region: content
     settings:
       match_operator: CONTAINS
@@ -177,7 +140,7 @@ content:
     third_party_settings: {  }
   field_work_date:
     type: datetime_default
-    weight: 11
+    weight: 13
     region: content
     settings: {  }
     third_party_settings: {  }

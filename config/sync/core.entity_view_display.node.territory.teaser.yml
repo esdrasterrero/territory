@@ -6,6 +6,8 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.territory.field_assign_date
     - field.field.node.territory.field_geofield
+    - field.field.node.territory.field_personal_territory
+    - field.field.node.territory.field_return_date
     - field.field.node.territory.field_term_assignee
     - field.field.node.territory.field_term_territory
     - field.field.node.territory.field_territory_id
@@ -18,7 +20,8 @@ dependencies:
 third_party_settings:
   field_layout:
     id: layout_onecol
-    settings: {  }
+    settings:
+      label: ''
 id: node.territory.teaser
 targetEntityType: node
 bundle: territory
@@ -30,6 +33,8 @@ hidden:
   entity_print_view_word_docx: true
   field_assign_date: true
   field_geofield: true
+  field_personal_territory: true
+  field_return_date: true
   field_term_assignee: true
   field_term_territory: true
   field_territory_id: true
