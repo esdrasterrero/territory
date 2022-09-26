@@ -9,7 +9,7 @@ id: node.territory.field_territory_id
 field_name: field_territory_id
 entity_type: node
 bundle: territory
-label: 'Territory ID'
+label: 'Número de territorio'
 description: ''
 required: false
 translatable: false
