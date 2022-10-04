@@ -12,6 +12,7 @@ dependencies:
     - field.storage.node.field_return_date
     - field.storage.node.field_term_assignee
     - field.storage.node.field_term_territory
+    - field.storage.node.field_territory_id
     - field.storage.node.field_work_date
     - node.type.street
     - node.type.territory
@@ -28,6 +29,7 @@ dependencies:
     - taxonomy
     - tracker
     - user
+    - views_sort_null_field
 id: territory_view
 label: Territory
 module: views
@@ -1834,6 +1836,70 @@ display:
           empty_zero: false
           hide_alter_empty: true
           link_to_node: false
+        field_territory_id:
+          id: field_territory_id
+          table: node__field_territory_id
+          field: field_territory_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: '#'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: number_integer
+          settings:
+            thousand_separator: ''
+            prefix_suffix: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
         title:
           id: title
           table: node_field_data
@@ -2142,9 +2208,9 @@ display:
           click_sort_column: value
           type: boolean
           settings:
-            format: unicode-yes-no
+            format: custom
             format_custom_false: ''
-            format_custom_true: ''
+            format_custom_true: ✔
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -2208,7 +2274,33 @@ display:
           text: editar
           output_url_as_text: false
           absolute: false
-      sorts: {  }
+      sorts:
+        field_territory_id_value_null_sort:
+          id: field_territory_id_value_null_sort
+          table: node__field_territory_id
+          field: field_territory_id_value_null_sort
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: null_sort
+          order: ASC
+          expose:
+            label: '#'
+            field_identifier: field_territory_id_value_null_sort
+          exposed: false
+        field_territory_id_value:
+          id: field_territory_id_value
+          table: node__field_territory_id
+          field: field_territory_id_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: standard
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
       filters:
         status:
           id: status
@@ -2372,11 +2464,13 @@ display:
           columns:
             field_term_territory: field_term_territory
             nid: nid
+            field_territory_id: field_territory_id
             title: title
             field_term_assignee: field_term_assignee
             field_assign_date: field_assign_date
-            edit_node_1: edit_node_1
             field_return_date: field_return_date
+            field_personal_territory: field_personal_territory
+            edit_node_1: edit_node_1
           default: '-1'
           info:
             field_term_territory:
@@ -2384,14 +2478,21 @@ display:
               default_sort_order: asc
               align: ''
               separator: ''
-              empty_column: false
+              empty_column: true
               responsive: ''
             nid:
               sortable: false
               default_sort_order: asc
               align: ''
               separator: ''
-              empty_column: false
+              empty_column: true
+              responsive: ''
+            field_territory_id:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: true
               responsive: ''
             title:
               sortable: true
@@ -2414,15 +2515,22 @@ display:
               separator: ''
               empty_column: false
               responsive: ''
-            edit_node_1:
+            field_return_date:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_personal_territory:
               sortable: false
               default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
               responsive: ''
-            field_return_date:
-              sortable: true
+            edit_node_1:
+              sortable: false
               default_sort_order: asc
               align: ''
               separator: ''
@@ -2493,3 +2601,4 @@ display:
         - 'config:field.storage.node.field_return_date'
         - 'config:field.storage.node.field_term_assignee'
         - 'config:field.storage.node.field_term_territory'
+        - 'config:field.storage.node.field_territory_id'

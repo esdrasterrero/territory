@@ -1,0 +1,8 @@
+uuid: 1f1c6cde-d80b-4d99-8a61-2612c2f89b49
+langcode: en
+status: true
+dependencies: {  }
+id: short_notation
+label: 'Short notation'
+locked: false
+pattern: d/m/Y
