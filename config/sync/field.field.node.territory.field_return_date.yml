@@ -1,0 +1,21 @@
+uuid: 9dd5a7bd-8a56-456a-b7ef-930c9232b65b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_return_date
+    - node.type.territory
+  module:
+    - datetime
+id: node.territory.field_return_date
+field_name: field_return_date
+entity_type: node
+bundle: territory
+label: 'Fecha de Entrada'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.field.node.territory.field_assign_date
     - field.field.node.territory.field_geofield
+    - field.field.node.territory.field_personal_territory
+    - field.field.node.territory.field_return_date
     - field.field.node.territory.field_term_assignee
     - field.field.node.territory.field_term_territory
     - field.field.node.territory.field_territory_id
@@ -18,26 +20,26 @@ dependencies:
 third_party_settings:
   field_layout:
     id: layout_onecol
-    settings: {  }
+    settings:
+      label: ''
 id: node.territory.default
 targetEntityType: node
 bundle: territory
 mode: default
 content:
   entity_print_view_pdf:
-    weight: 5
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 5
+    region: content
   field_geofield:
-    weight: 0
+    type: leaflet_formatter_easyprint
     label: hidden
     settings:
       multiple_map: '0'
       popup_content: ''
       leaflet_map: 'OSM Mapnik'
       height: '490'
-      fullscreen_control: '1'
       reset_map:
         position: topright
         control: 0
@@ -87,13 +89,20 @@ content:
           zoom: 16
           popup: 0
           options: ''
+      gesture_handling: false
+      weight: null
+      fullscreen:
+        control: false
+        options: '{"position":"topleft","pseudoFullscreen":false}'
     third_party_settings: {  }
-    type: leaflet_formatter_easyprint
+    weight: 0
     region: content
 hidden:
   entity_print_view_epub: true
   entity_print_view_word_docx: true
   field_assign_date: true
+  field_personal_territory: true
+  field_return_date: true
   field_term_assignee: true
   field_term_territory: true
   field_territory_id: true

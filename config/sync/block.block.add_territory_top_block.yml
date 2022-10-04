@@ -1,0 +1,30 @@
+uuid: d8eee6f9-8248-4233-9590-667e5dbb5f51
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:21c91c2d-7e98-456a-ab39-69e408961559'
+  module:
+    - block_content
+    - system
+  theme:
+    - olivero
+id: add_territory_top_block
+theme: olivero
+region: content_above
+weight: -5
+provider: null
+plugin: 'block_content:21c91c2d-7e98-456a-ab39-69e408961559'
+settings:
+  id: 'block_content:21c91c2d-7e98-456a-ab39-69e408961559'
+  label: 'Añadir territorio'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "<front>\r\n/territory"

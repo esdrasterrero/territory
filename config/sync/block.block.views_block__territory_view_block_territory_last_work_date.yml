@@ -18,16 +18,16 @@ plugin: 'views_block:territory_view-block_territory_last_work_date'
 settings:
   id: 'views_block:territory_view-block_territory_last_work_date'
   label: 'Trabajado Ultimamente'
-  provider: views
   label_display: visible
+  provider: views
+  context_mapping: {  }
   views_label: 'Trabajado Ultimamente'
   items_per_page: none
-  context_mapping: {  }
 visibility:
   node_type:
     id: node_type
-    bundles:
-      territory: territory
     negate: false
     context_mapping:
       node: '@node.node_route_context:node'
+    bundles:
+      territory: territory

@@ -14,7 +14,8 @@ dependencies:
 third_party_settings:
   field_layout:
     id: layout_onecol
-    settings: {  }
+    settings:
+      label: ''
 _core:
   default_config_hash: krIbNOdqw4vMF3Ty8qAW6AxgxmdBig5XuQRBW8-HYCU
 id: node.book.teaser
@@ -23,17 +24,17 @@ bundle: book
 mode: teaser
 content:
   body:
-    label: hidden
     type: text_summary_or_trimmed
-    weight: 100
-    region: content
+    label: hidden
     settings:
       trim_length: 600
     third_party_settings: {  }
-  links:
-    weight: 101
+    weight: 100
     region: content
+  links:
     settings: {  }
     third_party_settings: {  }
+    weight: 101
+    region: content
 hidden:
   langcode: true

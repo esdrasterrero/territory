@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.field.node.territory.field_assign_date
     - field.field.node.territory.field_geofield
+    - field.field.node.territory.field_personal_territory
+    - field.field.node.territory.field_return_date
     - field.field.node.territory.field_term_assignee
     - field.field.node.territory.field_term_territory
     - field.field.node.territory.field_territory_id
@@ -12,6 +14,7 @@ dependencies:
     - node.type.territory
   module:
     - datetime
+    - field_group
     - field_layout
     - layout_discovery
     - leaflet
@@ -21,6 +24,54 @@ third_party_settings:
     id: layout_onecol
     settings:
       label: ''
+  field_group:
+    group_assignee:
+      children:
+        - field_term_assignee
+        - field_personal_territory
+      label: Asignación
+      region: content
+      parent_name: ''
+      weight: 2
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
+    group_dates:
+      children:
+        - field_assign_date
+        - field_return_date
+        - field_work_date
+      label: Fechas
+      region: content
+      parent_name: ''
+      weight: 3
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
+    group_general:
+      children:
+        - title
+        - field_territory_id
+        - field_term_territory
+      label: General
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
 id: node.territory.default
 targetEntityType: node
 bundle: territory
@@ -28,196 +79,164 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 3
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
   field_assign_date:
-    weight: 9
+    type: datetime_default
+    weight: 13
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: datetime_default
-    region: content
   field_geofield:
-    weight: 26
+    type: leaflet_widget_default
+    weight: 10
+    region: content
     settings:
       map:
         leaflet_map: 'OSM Mapnik'
-        height: '800'
-        auto_center: '1'
-        map_position:
-          force: '1'
-          center:
-            lat: '51.9244'
-            lon: '4.4777'
-          zoom: '14'
-          minZoom: '1'
-          maxZoom: '18'
-          zoomFiner: '0'
-        scroll_zoom_enabled: '1'
-        fullscreen_control: '1'
+        height: 800
         locate: 0
+        auto_center: 1
+        map_position:
+          force: true
+          center:
+            lat: 51.9244
+            lon: 4.4777
+          zoom: 14
+          minZoom: 1
+          maxZoom: 18
+          zoomFiner: 0
+        scroll_zoom_enabled: 1
       input:
-        show: '1'
-        readonly: 0
+        show: true
+        readonly: false
       toolbar:
         position: topright
-        drawMarker: '1'
-        drawPolygon: '1'
-        editMode: '1'
-        dragMode: '1'
-        removalMode: '1'
-        drawPolyline: 0
-        drawRectangle: 0
+        marker: defaultMarker
+        drawPolyline: false
+        drawRectangle: false
+        drawPolygon: true
         drawCircle: false
-        drawCircleMarker: false
-        cutPolygon: 0
+        drawText: false
+        editMode: true
+        dragMode: true
+        cutPolygon: false
+        removalMode: true
+        rotateMode: false
       reset_map:
         position: topright
-        control: 0
+        control: false
+      fullscreen:
+        control: false
+        options: '{"position":"topleft","pseudoFullscreen":false}'
+      path: '{"color":"#3388ff","opacity":"1.0","stroke":true,"weight":3,"fill":"depends","fillColor":"*","fillOpacity":"0.2","radius":"6"}'
       geocoder:
+        control: false
         settings:
           position: topright
-          input_size: '25'
+          input_size: 25
           providers:
-            googlemaps:
-              checked: '1'
-              weight: '0'
-            arcgisonline:
-              weight: '0'
-              checked: 0
-            bingmaps:
-              weight: '0'
-              checked: 0
             file:
-              weight: '0'
-              checked: 0
-            freegeoip:
-              weight: '0'
-              checked: 0
+              weight: 0
+              checked: false
             gpxfile:
-              weight: '0'
-              checked: 0
-            geojsonfile:
-              weight: '0'
-              checked: 0
-            geoplugin:
-              weight: '0'
-              checked: 0
-            geoip:
-              weight: '0'
-              checked: 0
-            geonames:
-              weight: '0'
-              checked: 0
-            googlemaps_business:
-              weight: '0'
-              checked: 0
-            hostip:
-              weight: '0'
-              checked: 0
-            ipinfodb:
-              weight: '0'
-              checked: 0
-            kmlfile:
-              weight: '0'
-              checked: 0
-            mapquest:
-              weight: '0'
-              checked: 0
-            maxmind:
-              weight: '0'
-              checked: 0
-            nominatim:
-              weight: '0'
-              checked: 0
-            opencage:
-              weight: '0'
-              checked: 0
-            openstreetmap:
-              weight: '0'
-              checked: 0
+              weight: 0
+              checked: false
             random:
-              weight: '0'
-              checked: 0
-            tomtom:
-              weight: '0'
-              checked: 0
-            yandex:
-              weight: '0'
-              checked: 0
-          min_terms: '4'
-          delay: '800'
-          zoom: '16'
+              weight: 0
+              checked: false
+          min_terms: 4
+          delay: 800
+          zoom: 16
+          popup: false
           options: ''
-          popup: 0
-        control: 0
+      geometry_validation: 0
     third_party_settings: {  }
-    type: leaflet_widget_default
-    region: content
-  field_term_assignee:
-    weight: 8
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-      match_limit: 10
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
-  field_term_territory:
+  field_personal_territory:
+    type: boolean_checkbox
     weight: 10
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-      match_limit: 10
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
     region: content
-  field_work_date:
-    weight: 11
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_return_date:
+    type: datetime_default
+    weight: 14
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: datetime_default
+  field_term_assignee:
+    type: entity_reference_autocomplete
+    weight: 9
     region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_term_territory:
+    type: entity_reference_autocomplete
+    weight: 3
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_territory_id:
+    type: number
+    weight: 2
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_work_date:
+    type: datetime_default
+    weight: 15
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 1
+    weight: 0
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   path:
     type: path
-    weight: 6
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
+    weight: 6
+    region: content
     settings:
       display_label: true
-    weight: 4
-    region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
+    weight: 9
+    region: content
     settings:
       display_label: true
-    weight: 7
-    region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
+    weight: 7
+    region: content
     settings:
       display_label: true
-    weight: 5
-    region: content
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 0
+    weight: 1
     region: content
     settings:
       size: 60
@@ -225,13 +244,12 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 2
+    weight: 4
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
-    region: content
     third_party_settings: {  }
-hidden:
-  field_territory_id: true
+hidden: {  }
