@@ -1,6 +1,6 @@
 name: territory
-type: drupal8
-docroot: web
+type: drupal9
+docroot: public_html
 php_version: "7.4"
 webserver_type: nginx-fpm
 router_http_port: "80"
