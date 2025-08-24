@@ -79,7 +79,7 @@ class EasyprintLeafletFormatter extends LeafletDefaultFormatter {
    *
    * This function is called from parent::view().
    */
-  public function viewElements(FieldItemListInterface $items, $langcode) {
+  public function viewElements(FieldItemListInterface $items, $langcode): array {
     $element = parent::viewElements($items, $langcode);
     $element['#attached']['drupalSettings']['leaflet']['easyPrint']['easyprint_width'] = $this->getSetting('easyprint_width');
     $element['#attached']['drupalSettings']['leaflet']['easyPrint']['easyprint_height'] = $this->getSetting('easyprint_height');

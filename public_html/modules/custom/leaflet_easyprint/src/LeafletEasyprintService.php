@@ -5,7 +5,7 @@ namespace Drupal\leaflet_easyprint;
 use Drupal\leaflet\LeafletService;
 
 /**
- * Provides a  LeafletEasyprintService class.
+ * Provides a LeafletEasyprintService class.
  */
 class LeafletEasyprintService extends LeafletService {
 

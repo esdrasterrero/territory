@@ -1,7 +1,7 @@
 name: 'Leaflet Easyprint'
 type: module
 description: 'A leaflet plugin that generates a printable map image from a leaflet map.'
-core_version_requirement: ^8 || ^9
+core_version_requirement: ^8 || ^9 || ^10
 package: 'Custom'
 dependencies:
   - leaflet
